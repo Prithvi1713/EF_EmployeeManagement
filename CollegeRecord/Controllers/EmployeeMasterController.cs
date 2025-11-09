@@ -49,7 +49,10 @@ namespace CollegeRecord.Controllers
         }
         public async Task<IActionResult> Details(int id)
         {
-            var data = await _appDbContext.employeeMasters.FindAsync(id);
+            var data = await _appDbContext.employeeMasters
+                 .Include(e => e.departmentMaster)
+                 .Include(e => e.designationMaster)
+                 .FirstOrDefaultAsync(m => m.EmpId == id);
             return View(data);
         }
         public async Task<IActionResult> Edit(int id)
@@ -75,7 +78,10 @@ namespace CollegeRecord.Controllers
         }
         public async Task<IActionResult> Delete(int id)
         {
-            var data = await _appDbContext.employeeMasters.FindAsync(id);
+            var data = await _appDbContext.employeeMasters
+               .Include(e => e.departmentMaster)
+               .Include(e => e.designationMaster)
+               .FirstOrDefaultAsync(m => m.EmpId == id);
             return View(data);
         }
         [HttpPost]

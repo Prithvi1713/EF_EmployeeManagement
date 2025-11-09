@@ -44,24 +44,28 @@
                 <!-- /.col -->
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label asp-for="Gender" class="control-label d-block"></label>
-                        <input type="radio" asp-for="Gender" value="Male" /> Male
-                        <input type="radio" asp-for="Gender" value="Female" /> Female
-                        <input type="radio" asp-for="Gender" value="Trans" /> Trans
-                        <span asp-validation-for="Gender" class="text-danger"></span>
+                        <label asp-for="salary" class="control-label"></label>
+                        <input asp-for="salary" class="form-control" />
+                        <span asp-validation-for="salary" class="text-danger"></span>
                     </div>
-                    <div class="">
-                        <label asp-for="Gender" class="control-label"></label>
-                        <input type="radio" asp-for="Gender" value="Male" class="form-check-input  ">Male</input>
-                        <input type="radio" asp-for="Gender" value="FeMale" class="form-check-input">Female</input>
-                        <input type="radio" asp-for="Gender" value="Not-Prefer" class="form-check-input">Trans</input>
-                        <span asp-validation-for="Gender" class="text-danger"></span>
-                    </div>
+                   
+                   
                     <div class="form-group">
                         <label asp-for="salary" class="control-label"></label>
                         <input asp-for="salary" class="form-control" />
                         <span asp-validation-for="salary" class="text-danger"></span>
                     </div>
+                    <div class="form-group d-flex align-items-center">
+                        <label asp-for="Gender" class="control-label mr-3">Gender:</label>
+
+                        <div>
+                            <input type="radio" asp-for="Gender" value="Male" id="male" /> <label for="male" class="mr-3">Male</label>
+                            <input type="radio" asp-for="Gender" value="Female" id="female" /> <label for="female" class="mr-3">Female</label>
+                            <input type="radio" asp-for="Gender" value="Trans" id="trans" /> <label for="trans">Trans</label>
+                        </div>
+                    </div>
+
+
                     <div class="form-group form-check">
                         <label class="form-check-label">
                             <input class="form-check-input" asp-for="status" /> @Html.DisplayNameFor(model => model.status)
@@ -82,14 +86,14 @@
                    
                 </div>
                 <!-- /.col -->
-                <div class="form-group " style="">
-                    <input type="submit" value="Create" class="btn btn-primary" />
-                    <a asp-action="Index" asp-controller="EmployeeMaster" class="btn btn-secondary"> Back</a>
+               
 
-                </div>
             </div>
             <!-- /.row -->
-
+            <div class="form-group d-flex justify-content-center gap-3 mt-3">
+                <input type="submit" value="Create" class="btn btn-primary mx-3" />
+                <a asp-action="Index" asp-controller="EmployeeMaster" class="btn btn-secondary mx-3">Back</a>
+            </div>
 
         </div>
 
