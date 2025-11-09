@@ -1,0 +1,103 @@
+﻿@model CollegeRecord.Models.EmployeeMaster
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="card card-default">
+        <div class="card-header">
+            <h2 style="text-align:center;">Create Employee </h2>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label"></label>
+                        <input asp-for="FirstName" class="form-control" />
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MiddleName" class="control-label"></label>
+                        <input asp-for="MiddleName" class="form-control" />
+                        <span asp-validation-for="MiddleName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName" class="control-label"></label>
+                        <input asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EmailId" class="control-label"></label>
+                        <input asp-for="EmailId" class="form-control" />
+                        <span asp-validation-for="EmailId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MobileNo" class="control-label"></label>
+                        <input asp-for="MobileNo" class="form-control" />
+                        <span asp-validation-for="MobileNo" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="BirthDate" class="control-label"></label>
+                        <input asp-for="BirthDate" class="form-control" />
+                        <span asp-validation-for="BirthDate" class="text-danger"></span>
+                    </div>
+                    <div class="">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <input type="radio" asp-for="Gender" value="Male" class="form-check-input  ">Male</input>
+                        <input type="radio" asp-for="Gender" value="FeMale" class="form-check-input">Female</input>
+                        <input type="radio" asp-for="Gender" value="Not-Prefer" class="form-check-input">Trans</input>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="salary" class="control-label"></label>
+                        <input asp-for="salary" class="form-control" />
+                        <span asp-validation-for="salary" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="status" /> @Html.DisplayNameFor(model => model.status)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DeptId" class="control-label"></label>
+                        <select asp-for="DeptId" asp-items="ViewBag.deptList" class="form-control">
+                            <option value="">---select Department---</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DesignId" class="control-label"></label>
+                        <select asp-for="DesignId" asp-items="ViewBag.designList" class="form-control">
+                            <option value="">---select Designation---</option>
+                        </select>
+                    </div>
+                   
+                </div>
+                <!-- /.col -->
+                <div class="form-group " style="">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-action="Index" asp-controller="EmployeeMaster" class="btn btn-secondary"> Back</a>
+
+                </div>
+            </div>
+            <!-- /.row -->
+
+
+        </div>
+
+    </div>
+</form>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
