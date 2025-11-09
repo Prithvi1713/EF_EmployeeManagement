@@ -44,9 +44,11 @@
                 <!-- /.col -->
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label asp-for="BirthDate" class="control-label"></label>
-                        <input asp-for="BirthDate" class="form-control" />
-                        <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        <label asp-for="Gender" class="control-label d-block"></label>
+                        <input type="radio" asp-for="Gender" value="Male" /> Male
+                        <input type="radio" asp-for="Gender" value="Female" /> Female
+                        <input type="radio" asp-for="Gender" value="Trans" /> Trans
+                        <span asp-validation-for="Gender" class="text-danger"></span>
                     </div>
                     <div class="">
                         <label asp-for="Gender" class="control-label"></label>
