@@ -25,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.DesignName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.DesignId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DesignId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.DesignId">Edit</a> 
+                <a class="btn btn-success" asp-action="Details" asp-route-id="@item.DesignId">Details</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.DesignId">Delete</a>
             </td>
         </tr>
 }
