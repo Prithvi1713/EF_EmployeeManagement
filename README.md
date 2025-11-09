@@ -1,7 +1,5 @@
 # EF_EmployeeManagement
 
-# EmployeeManagementSystem
-
 # Steps to Create Employee Management System Project
 
     # Create ASP.NET Core Web App (Model-View-Controller) project 
