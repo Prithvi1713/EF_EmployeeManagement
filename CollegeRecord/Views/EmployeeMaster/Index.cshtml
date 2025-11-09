@@ -88,9 +88,9 @@
                 @Html.DisplayFor(modelItem => item.designationMaster.DesignName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.EmpId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.EmpId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.EmpId">Delete</a>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.EmpId">Edit</a> 
+                <a class="btn btn-success" asp-action="Details" asp-route-id="@item.EmpId">Details</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.EmpId">Delete</a>
             </td>
         </tr>
 }
