@@ -36,31 +36,35 @@ namespace CollegeRecord.Models
         [Display(Name = "Birth Date")]
 
         public DateTime BirthDate { get; set; }
+
         [Required(ErrorMessage = "Please select Gender")]
-
         [Display(Name = "Gender ")]
-
-
         public string Gender { get; set; }
-        [Required(ErrorMessage = "Please enter Employee Name")]
-        [DisplayFormat(DataFormatString = "{0:0}")]
-        [Display(Name = "salary")]
+        [Required(ErrorMessage ="Please enter Employee Address")]
+        [StringLength(50, ErrorMessage ="Address length exceeded")]
+        [Display(Name ="Address")]
+        public string EmpAddress { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:0}")]
+        [Display(Name = "Salary")]
+        [Required(ErrorMessage = "Please enter Salary")]
         public decimal salary { get; set; }
         [Required(ErrorMessage = "Please select status")]
-        [Display(Name = " Status")]
+        [Display(Name = "Job Status")]
 
 
-        public bool status { get; set; }
+        public string status { get; set; }
         [Display(Name = "Department")]
 
         [ForeignKey(nameof(departmentMaster))]
+        [Required(ErrorMessage ="Please select the Department")]
         public int DeptId { get; set; }
         [Display(Name = "Department")]
 
         public DepartmentMaster? departmentMaster { get; set; }
 
         [ForeignKey(nameof(designationMaster))]
+        [Required(ErrorMessage = "Please select the Designation")]
 
         public int DesignId { get; set; }
         [Display(Name = "Designation")]
