@@ -32,14 +32,30 @@
             
     # Create the Controller for each model class 
             It is mendetory to add Suffix of each controller as a Controller.cs (ex- EmployeeMasterController.cs)
+                EmployeeMasterController.cs
+		        DepartmentMasterController.cs
+		        DepartmentMasterController.cs
             add the code in each controller for action method (Index, Create,Details, Edit, Delete)
 
     # Create the View folder for each model class in View Folder 
-            add view as a controller view 
+                EmployeeMaster
+		        DepartmentMaster
+		        DesignationMaster
             inside the folder create the views for actions (Index,Create, Edit, Delete, Details)
+                Index.cshtml
+		        Create.cshtml
+		        Details.cshtml
+		        Edit.cshtml
+		        Delete.cshtml
 
     # In Layout.cshtml file add the controller and action method name in navbar 
+            asp-controller= "DepartmentMaster"		asp-action= "Index"
+		    asp-controller= "DesignationMaster"		asp-action= "Index"
+		    asp-controller= "EmployeeMaster"		asp-action= "Index"
 
+    # in program.cs file change default MapRouting controller and action  
+		    asp-controller= "DepartmentMaster"		asp-action= "Index"
+        
     # Build Solution 
 
     # Run project 
