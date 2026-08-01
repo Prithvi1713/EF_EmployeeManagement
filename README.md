@@ -20,7 +20,7 @@
     
     # add the connection string in appSetting.json
             "ConnectionStrings": {
-                      "ProjectConnectionString": "Server=LAPTOP-FQQBVLIE;Database=EmployeeMgmtSystem;Trusted_Connection=True;TrustServerCertificate=True;"
+                      "ProjectConnectionString": "Server=LAPTOP;Database=EmployeeMgmtSystem;Trusted_Connection=True;TrustServerCertificate=True;"
             },
     # add the services in Program.cs file for Database connection 
             builder.Services.AddDbContext<DatabaseContext>(options => 
